@@ -1,0 +1,42 @@
+{
+    "lists.source.mru.ignoreGitIgnore": true,
+	"suggest.enablePreview": true,
+	"suggest.noselect": true,
+	"suggest.detailField": "preview",
+	"suggest.enablePreselect": true,
+
+	"codeLens.enable": true,
+
+	"list.source.mru.ignoreGitIgnore": true,
+
+	"ccls.cache.directory": ".ccls-cache",
+	"ccls.index.onChange": true,
+	"ccls.index.trackDependency":2,
+	"ccls.codeLens.renderInline": true,
+	"ccls.codeLens.localVariables": true,
+	"ccls.completion.detailedLabel": true,
+	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
+
+	"leetcode.language": "cpp",
+	"leetcode.trace.server": "verbose",
+
+	"python.pythonPath": "/usr/bin/python3.6",
+	"python.linting.flake8Args": [
+		"--max-line-length 120" 
+	],
+
+	"languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cc", "cpp", "c++", "tpp", "objc", "objcpp"],
+			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+			"initializationOptions": {
+				"cache": {
+					"directory": "/tmp/ccls"
+				},
+				"highlight": { "lsRanges" : true },
+				"compilationDatabaseDirectory":"build"
+			}
+		}
+	}
+}
