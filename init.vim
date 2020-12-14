@@ -160,6 +160,6 @@ set smartcase   " 如果有一个大写字母，则切换到大小写敏感查�
 
 " git diff {
     nmap <silent> <leader>1 :diffget 1<cr> :diffupdata<cr>
-    nmap <silent> <leader>2 :diffget 3<cr> :diffupdata<cr>
+    nmap <silent> <leader>2 :diffget 2<cr> :diffupdata<cr>
     nmap <silent> <leader>3 :diffget 3<cr> :diffupdata<cr>
 " }
