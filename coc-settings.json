@@ -1,5 +1,4 @@
 {
-    "lists.source.mru.ignoreGitIgnore": true,
 	"suggest.enablePreview": true,
 	"suggest.noselect": true,
 	"suggest.detailField": "preview",
