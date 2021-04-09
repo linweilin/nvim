@@ -18,6 +18,9 @@ call plug#begin('~/.config/nvim/plugged')
     " Others
     "Plug 'iandingx/leetcode.vim'
 
+    " Rainbow parentheses
+    Plug 'frazrepo/vim-rainbow'
+
 call plug#end()
 
 
@@ -137,6 +140,10 @@ call plug#end()
 " nerdcommenter {
     " add a space after between comment and code
     let g:NERDSpaceDelims=1 
+" }
+
+" rainbow parentheses {
+    let g:rainbow_active=1
 " }
 
 " vim settings
