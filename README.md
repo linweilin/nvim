@@ -40,7 +40,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable && sudo apt update && sudo apt -
     ```
     :CocInstall coc-marketplace
     ```
-2. 循环使用`:CocLists`，进入marketplace，再安装剩余的插件。之后每次按ctrl+p，重复打开上次的窗口，直至安装完毕。
+2. 循环使用`:CocLists`，进入marketplace，再安装剩余的插件。之后每次按 `空格+p`，重复打开上次的窗口，直至安装完毕。
     ```
     coc-python
     coc-lists
@@ -51,6 +51,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable && sudo apt update && sudo apt -
     coc-cmake
     coc-ccls
     ```
+3. 如果安装coc-nvim时出错，请先升级nodejs（看下面）
 
 ### nodejs安装
 1. 到[node js官网](https://nodejs.org/en/download/)下载编译好的二进制文件，解压后得到文件夹node-vxx.xx.x-linux-x64
@@ -68,7 +69,8 @@ sudo add-apt-repository ppa:neovim-ppa/unstable && sudo apt update && sudo apt -
     ```
     node -v 
     // 若已经安装过node，，且安装的node版本小于10，则需
-    // sudo ap remove node nodejs-dev npm
+    // sudo apt remove node nodejs-dev npm
+    // 如果node无法通过apt卸载，则可以 sudo mv /usr/bin/node /usr/bin/node_ori
     ```
 5. 根据`:checkhealth`中的提示执行：
     ```
@@ -169,7 +171,8 @@ python3 -m pip install 'python-language-server[all]'
 ```
 catkin_make --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=YES
 ```
-### 安装coc-ccls打开nvim报错解决
+### 安装coc-ccls后，打开nvim报错解决
+报错：`[coc.nvim] Unable to load global extension at /home/username/.config/coc/extensions/node_modules/coc-ccls: main file ./lib/extension.js not found, you may need to build the project.`
 ```
 cd ~/.config/coc/extensions/node_modules/coc-ccls
 ln -s node_modules/ws/lib lib
