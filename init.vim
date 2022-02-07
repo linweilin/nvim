@@ -111,6 +111,9 @@ call plug#end()
     :command Build call Run_build()
     :command Cmake call Run_cmake()
     :command GDB :tabnew term://gdb
+    call SetupCommandAbbrs('cmake', 'Cmake')
+    call SetupCommandAbbrs('build', 'Build')
+    call SetupCommandAbbrs('gdb', 'GDB')
 " }
 
 " deol {
